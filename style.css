@@ -1,0 +1,235 @@
+:root {
+    --bg: #F1F3F4;
+    --white: #ffffff;
+    --blk : #566677;
+    --blk-var: #7C98B6;
+    --blue: #0091AE;
+    --orange: #FF7A59;
+  }
+
+body{
+    margin: 0;
+    height: 100vh;
+
+    background-color: #FBFBFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: var(--blue);
+}
+h1 span{
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.bloc{
+    background-color: var(--white);
+    width: 600px;
+    height: 460px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 35px 50px;
+    overflow: hidden;
+}
+
+#slider{
+    width: 1300px;
+    display: flex;
+    transition: ease-in-out 0.4s;
+}
+
+.slidin{
+    transform: translateX(-650px);
+}
+
+.calcul{
+    width: 600px;
+    margin-right: 50px;
+}
+.result{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
+
+.result h3{
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: var(--blk);
+    margin: 0;
+}
+.result h2{
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 98px;
+    text-align: center;
+    color: var(--blue);
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+.result h4{
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    color: var(--blk-var);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.result p{
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--blk-var);
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    /* gap: 18px; */
+    
+    
+}
+
+label{
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--blk-var);
+    margin-bottom: 6px;
+}
+
+input[type=number] {
+    font-size: 34px;
+    line-height: 46px;
+    color: var(--blk);
+    height: 60px;
+    background: #F1F3F4;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    
+  }
+
+input[type=number]:focus {
+    /* border: none; */
+    outline: none;
+    /* background-color: var(--orange); */
+  }
+
+  form span{
+    text-align: end;
+    transform: translateY(-66px);
+    margin-bottom: -33px;
+    margin-right: 20px;
+    z-index: 100;
+    pointer-events: none;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: right;
+    
+
+    color: var(--blk-var);
+  }
+
+button{
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: var(--orange);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--white);
+    transition: ease-in-out 0.4s;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: var(--blue);
+    cursor: pointer;
+ 
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    color: var(--blk-var);
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 26px;
+    }
+
+    .bloc {
+      width: 100vw;
+      padding: 0;
+      background-color: #FBFBFE;
+      box-shadow: none;
+    border-radius: 0px;
+    }
+
+    .calcul, .result{
+        width: calc(100vw - 40px);
+        padding: 0px 20px;
+        margin-right: 0;
+    }
+    
+    #slider{
+        width: calc(100vh * 2);
+    }
+
+    .slidin{
+        transform: translateX(-100vw);
+    }
+
+    input[type=number] {
+        width: calc(100% - 20px);
+        padding-right: -20px;
+        background-color: var(--white);
+        border: solid 1px var(--blk-var);
+      }
+
+    form{
+        width: 100%;
+    }
+   
+
+    button{
+        width: calc(100% - 40px);
+        margin-left: 20px;
+    }
+
+    label{
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--blk-var);
+        margin-bottom: 6px;
+    }
+
+  }
+
+  a{
+    text-decoration: none;
+  }
+  a:visited{
+    color: var(--blk-var);
+  }
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrixTrajet.fr</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Calculateur Prix <span>Trajet</span></h1>
+    <div class="bloc" id="bloc" data-screen="1">
+        <div id="slider">
+           <div class="calcul" id="calcul">
+                <form>
+                    <label for="km">Trajet à parcourir</label>
+                    <input type="number" id="km" name="km" placeholder="60">
+                    <span>km</span>
+                    <label for="conso">Consommation moyenne du véhicule</label>
+                    <input type="number" id="conso" name="conso" placeholder="6.5">
+                    <span>L/100km</span>
+                    <label for="prix">Prix du carburant</label>
+                    <input type="number" id="prix" name="prix" placeholder="2.105">
+                    <span>€/Litre</span>
+                </form>
+            </div>
+            <div class="result" id="result">
+                <h3>Un trajet de <span id="result-km">30</span> km vous coûte</h3>
+                <h2 id="result-prix">100,00€</h2>
+                <h4>pour <span id="result-litreconso">6</span> litres consommés</h4>
+                <p>Calcule réalisé selon une consommation moyenne de carburant à <span id="result-conso">12</span> L/100km ainsi qu’un prix de carburant à <span id="result-prixl">2.10</span> €/L</p>
+            </div> 
+        </div>
+        
+        <button onclick="calcul()" id="but">Calculer</button>
+
+    </div>
+    <footer>
+        <p>Outils réalisé par <a href="https://martinledrut.fr">Martin Ledrut</a></p>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
